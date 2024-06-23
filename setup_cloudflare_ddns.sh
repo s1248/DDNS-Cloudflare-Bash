@@ -26,8 +26,9 @@ wget https://raw.githubusercontent.com/s1248/DDNS-Cloudflare-Bash/main/update-cl
 # Move the configuration file to the same directory as the script
 sudo mv update-cloudflare-dns.conf /usr/local/bin/update-cloudflare-dns.conf
 
-# Run the update script to check if it's working
-/usr/local/bin/update-cloudflare-dns
 
 # Add a cron job to run the script every minute
 (crontab -l 2>/dev/null; echo "* * * * * /usr/local/bin/update-cloudflare-dns") | crontab -
+
+# Run the update script to check if it's working
+/usr/local/bin/update-cloudflare-dns
